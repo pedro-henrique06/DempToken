@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DempToken.Domain
+{
+    public interface IBaseService<T> where T : class
+    {
+        public Task<IEnumerable<T>> Get();
+
+        public Task<T> GetById(int id);
+
+        public Task<int> Post(T obj);
+
+        public Task<int> Put(T obj);
+
+        public Task<int> Delete(int id);
+    }
+}
