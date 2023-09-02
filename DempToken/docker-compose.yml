@@ -1,0 +1,9 @@
+﻿version: '3'
+services:
+    app:
+        build: ./
+        container_name: sqlserver
+        environment:
+        - PORT=1433
+        port:
+        - "1433:1433"
